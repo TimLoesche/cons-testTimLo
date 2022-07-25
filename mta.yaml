@@ -1,0 +1,17 @@
+_schema-version: "3.2"
+ID: ip-juniorsTL
+version: 0.0.1
+modules:
+- name: wf_TL
+  type: com.sap.application.content
+  path: wf_TL
+  requires:
+  - name: workflow
+    parameters:
+      content-target: true
+resources:
+- name: workflow
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: workflow
+    service-plan: standard
